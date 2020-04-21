@@ -36,7 +36,14 @@ main {
   margin-left: 5rem;
   padding: 1rem;
 }
-  
+
+/* Styling for the navigation bar that sits over the whole site.
+    Centres all the icons to the middle of the coloured bar and 
+    moves the last item of the class "nav-item" to the bottom of
+    the flexbox (which in this case means the bottom of the user's
+    window. DON'T FORGET TO SET THE PARENT OF "nav-item"'s height
+    to the same as the navbar-nav!!!!! */
+/* ################################# */
 .navbar {
   width: 5rem;
   height: 100vh;
@@ -63,9 +70,12 @@ main {
 
 .nav-item:last-child {
     margin-top: auto;
-    background-color: var(--bg-secondary);
 }
+/* ################################# */
 
+/* Setting the text that accompanies the icons to only
+    appear when the  */
+/* ################################# */  
 .nav-link {
     display: flex;
     align-items: center;
@@ -78,7 +88,10 @@ main {
     display: none;
     margin-left: 1rem;
 }
+/* ################################# */
 
+/* Setting a minimum size for the SVG's so they stay
+    visible */
 .nav-link svg {
     min-width: 2rem;
     margin: 0 1.5rem;
