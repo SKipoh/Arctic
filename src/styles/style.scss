@@ -1,0 +1,78 @@
+/* Styles for use thorughout the Website */
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primary: #b6b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --nav-size: 60px;
+  }
+  
+  body {
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Changing how the Scroll Bar looks */
+  /* ################################# */
+  body::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+  }
+  /* ################################# */
+  
+  /* For use throughout the contents of the main page */
+  main {
+    margin-left: 5rem;
+    padding: 1rem;
+  }
+  
+  .navbar {
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+  }
+
+  .navbar-nav {
+      max-width: 100%;
+      height: 10vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .nav-item {
+        width: calc(var(--nav-size) * 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  }
+
+  .icon-button {
+      --button-size: calc(var(--nav-size) * 0.5);
+      width: var(--button-size);
+      height: var(--button-size);
+      background-color: #484a4d;
+      border-radius: 50%;
+      padding: 5px;
+      margin: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
