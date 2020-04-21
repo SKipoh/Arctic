@@ -122,6 +122,11 @@ main {
   margin: 0 1.5rem;
 }
 
+/* Some Transition styling for making the Nav bar open up,
+    display text next to each icon, and highlight them a colour
+    when we hover over them. This is done by giving them a greyscale
+    above (see .nav-link above), and transitioning it away */
+/* ################################# */
 .navbar:hover {
   width: 16rem;
 }
@@ -135,7 +140,7 @@ main {
 }
 
 .fa-secondary {
-  color: #ff7eee;
+  color: #df49a6;
 }
 
 .nav-link:hover {
@@ -143,5 +148,32 @@ main {
           filter: grayscale(0%) opacity(1);
   background: var(--bg-secondary);
   color: var(--text-secondary);
+}
+
+/* ################################# */
+/* Styling for the Nav bar's logo and text */
+.logo {
+  font-weight: bold;
+  text-transform: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+.logo svg {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: tramsform var(--transition-speed);
+  transition: tramsform var(--transition-speed);
+}
+
+.navbar:hover .logo svg {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 /*# sourceMappingURL=style.css.map */

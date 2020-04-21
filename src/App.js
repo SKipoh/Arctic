@@ -5,6 +5,8 @@ import { ReactComponent as CodeIcon } from './icons/code.svg';
 import { ReactComponent as MicroIcon } from './icons/microchip.svg';
 import { ReactComponent as DeathstarIcon } from './icons/deathstar.svg';
 import { ReactComponent as ShuttleIcon } from './icons/spaceshuttle.svg';
+import { ReactComponent as DoubleChevronIcon } from './icons/right-double-chevron.svg';
+
 
 //import './App.css';
 import './styles/style.css';
@@ -13,6 +15,7 @@ function App() {
   return (
     <div>
       <Navbar>
+        <Logo logo={<DoubleChevronIcon/>} text="Burne Tech"/>
         <NavItem icon={<TestIcon/>} itemText="About"/>
         <NavItem icon={<CodeIcon/>} itemText="Code"/>
         <NavItem icon={<DeathstarIcon/>} itemText="Hacking"/>
@@ -31,6 +34,7 @@ function App() {
   );
 }
 
+
 function Navbar(props) {
   // "navbar" is the actual coloured bar that runs down the side of the page,
   // with navbar-nav being the html list of items INSIDE "navbar".
@@ -42,6 +46,7 @@ function Navbar(props) {
     </nav>
   );
 }
+
 
 function NavItem(props) {
   return (
@@ -55,7 +60,19 @@ function NavItem(props) {
         </div>
       </div>
     </li>
-  )
+  );
+}
+
+
+function Logo(props) {
+  return (
+    <li class="logo">
+      <div className="nav-link">
+        <div class="link-text">{ props.text }</div>
+        <div>{ props.logo }</div>
+      </div>
+    </li>
+  );
 }
 
 export default App;
