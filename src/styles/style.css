@@ -168,8 +168,10 @@ main {
 .logo svg {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: tramsform var(--transition-speed);
-  transition: tramsform var(--transition-speed);
+  -webkit-transition: -webkit-transform var(--transition-speed);
+  transition: -webkit-transform var(--transition-speed);
+  transition: transform var(--transition-speed);
+  transition: transform var(--transition-speed), -webkit-transform var(--transition-speed);
 }
 
 .navbar:hover .logo svg {
