@@ -46,8 +46,6 @@ main {
     to the same as the navbar-nav!!!!! */
 /* ################################# */
 .navbar {
-  width: 5rem;
-  height: 100vh;
   position: fixed;
   background-color: var(--bg-primary);
   display: -webkit-box;
@@ -125,16 +123,11 @@ main {
 /* Some Transition styling for making the Nav bar open up,
     display text next to each icon, and highlight them a colour
     when we hover over them. This is done by giving them a greyscale
-    above (see .nav-link above), and transitioning it away */
+    above (see .nav-link above), and transitioning it away
+    
+    .navbar:hover has been moved to the Large screen media query!!!!
+    .navbar:hover .link-text moved to the Large Screen media query!!!! */
 /* ################################# */
-.navbar:hover {
-  width: 16rem;
-}
-
-.navbar:hover .link-text {
-  display: block;
-}
-
 .fa-primary {
   color: #ff7eee;
 }
@@ -177,5 +170,59 @@ main {
 .navbar:hover .logo svg {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
+}
+
+/* Small Screen Media Query (Intended for phone Portrait) */
+@media only screen and (max-width: 600px) {
+  /* Here we move the navbar to be along the bottom
+        of the user's screen */
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+  /* We remove the logo as it takes up too much room on
+        small screens */
+  .logo {
+    display: nonel;
+  }
+  /* We also change the direction of the flexbox so that it
+        is treated like a row on the bottom of the screen, not a column */
+  .navbar-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  /* Centering the icons to the X axis center of the navbar now
+        that it has moved */
+  .nav-link {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  /* Also, we remove the gap in the main element and the bar */
+  main {
+    margin: 0;
+  }
+}
+
+/* Large Screen Media Query */
+@media only screen and (min-width: 600px) {
+  /* The styling here will only be applied to screens
+        with a width of greater than 600 pixels (i.e. laptops/pc's)
+        so that the nav bar looks clean and smooth, with full functionality */
+  .navbar {
+    width: 5rem;
+    height: 100vh;
+  }
+  .navbar:hover {
+    width: 16rem;
+  }
+  .navbar:hover .link-text {
+    display: inline;
+    -webkit-transition: opacity var(--transition-speed);
+    transition: opacity var(--transition-speed);
+  }
 }
 /*# sourceMappingURL=style.css.map */
