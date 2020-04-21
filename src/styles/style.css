@@ -59,6 +59,8 @@ main {
   -webkit-box-align: top;
       -ms-flex-align: top;
           align-items: top;
+  -webkit-transition: width 200ms ease;
+  transition: width 200ms ease;
 }
 
 .navbar-nav {
@@ -88,7 +90,7 @@ main {
 
 /* ################################# */
 /* Setting the text that accompanies the icons to only
-    appear when the  */
+    appear when the user hover's over the link */
 /* ################################# */
 .nav-link {
   display: -webkit-box;
@@ -113,5 +115,14 @@ main {
 .nav-link svg {
   min-width: 2rem;
   margin: 0 1.5rem;
+}
+
+.navbar:hover {
+  width: 16rem;
+}
+
+.navbar:hover .link-text {
+  /*display: block;*/
+  display: inline;
 }
 /*# sourceMappingURL=style.css.map */

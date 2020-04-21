@@ -46,11 +46,13 @@ function Navbar(props) {
 function NavItem(props) {
   return (
     <li className="nav-item">
-      <div  class="nav-link">
-        { props.icon }
-      </div>
-      <div class="link-text">
-        {props.itemText}
+      <div class="nav-link">
+        <div>
+          { props.icon }
+        </div>
+        <div class="link-text">
+          {props.itemText}
+        </div>
       </div>
     </li>
   )
