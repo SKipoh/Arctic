@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 
-function App() {
+function About() {
   return (
     <div>
-      <h1>Main Page!</h1>
+        <h1>About Page</h1>
     </div>
   );
 }
 
-export default App;
+export default About;

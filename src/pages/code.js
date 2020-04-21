@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 
-function App() {
+function Code() {
   return (
     <div>
-      <h1>Main Page!</h1>
+        <h1>Programming Projects</h1>
     </div>
   );
 }
 
-export default App;
+export default Code;
