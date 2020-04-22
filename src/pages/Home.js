@@ -1,12 +1,12 @@
 import React from 'react';
 import '../styles/style.css';
 
-function Code() {
+function Home() {
   return (
     <div>
-        <h1>Programming Projects</h1>
+        <h1>Home Page!</h1>
     </div>
   );
 }
 
-export default Code;
+export default Home;
