@@ -16,7 +16,9 @@ body {
   margin: 0;
   padding: 0;
 }
-  
+
+
+
 /* Changing how the Scroll Bar looks */
 /* ################################# */
 body::-webkit-scrollbar {
@@ -31,12 +33,16 @@ body::-webkit-scrollbar-thumb {
   background: #6649b8;
 }
 /* ################################# */
-  
+
+
+
 /* For use throughout the contents of the main page */
 main {
   margin-left: 5rem;
   padding: 1rem;
 }
+
+
 
 /* Styling for the navigation bar that sits over the whole site.
     Centres all the icons to the middle of the coloured bar and 
@@ -191,6 +197,7 @@ main {
     }
 
 }
+
 
 /* Large Screen Media Query */
 @media only screen and (min-width: 600px) {
