@@ -3,21 +3,23 @@ import '../styles/style.css';
 
 // Importing any SVGs, Icons or other items as components for use in the
 // program
-import { ReactComponent as TestIcon } from '../icons/address-card.svg';
-import { ReactComponent as CodeIcon } from '../icons/code.svg';
-import { ReactComponent as MicroIcon } from '../icons/microchip.svg';
-import { ReactComponent as DeathstarIcon } from '../icons/deathstar.svg';
-import { ReactComponent as ShuttleIcon } from '../icons/spaceshuttle.svg';
-import { ReactComponent as DoubleChevronIcon } from '../icons/right-double-chevron.svg';
+import { ReactComponent as AboutIcon } from '../icons/address-cardDuo.svg';
+import { ReactComponent as CodeIcon } from '../icons/CodeDuo.svg';
+import { ReactComponent as MicroIcon } from '../icons/microchipDuo.svg';
+import { ReactComponent as SecretAgentIcon } from '../icons/secretAgentDuo.svg';
+import { ReactComponent as ShuttleIcon } from '../icons/spaceshuttleDuo.svg';
+import { ReactComponent as DoubleChevronIcon } from '../icons/doubleRightChevronDuo.svg';
+import { ReactComponent as HomeIcon } from '../icons/houseDuo.svg';
 
 function Navigation() {
   return (
     <Navbar>
         <Logo logo={<DoubleChevronIcon/>} text="Burne Tech"/>
-        <NavItem icon={<TestIcon/>} itemText="About"/>
+        <NavItem icon={<HomeIcon/>} itemText="Home"/>
         <NavItem icon={<CodeIcon/>} itemText={<div className="linebreak">{"Programming\nProjects"}</div>}/>
-        <NavItem icon={<DeathstarIcon/>} itemText={<div className="linebreak">{"Pen Testing\n Writeups"}</div>}/>
+        <NavItem icon={<SecretAgentIcon/>} itemText={<div className="linebreak">{"Pen Testing\n Writeups"}</div>}/>
         <NavItem icon={<MicroIcon/>} itemText="Electronics"/>
+        <NavItem icon={<AboutIcon/>} itemText="About"/>
         <NavItem icon={<ShuttleIcon/>} itemText="SPAACE"/>
       </Navbar>
   );

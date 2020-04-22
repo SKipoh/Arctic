@@ -11,14 +11,6 @@ import Hacking from './pages/hacking';
 
 import Nav from './components/navbar';
 
-// Importing any SVGs, Icons or other items as components for use in the
-// program
-import { ReactComponent as TestIcon } from './icons/address-card.svg';
-import { ReactComponent as CodeIcon } from './icons/code.svg';
-import { ReactComponent as MicroIcon } from './icons/microchip.svg';
-import { ReactComponent as DeathstarIcon } from './icons/deathstar.svg';
-import { ReactComponent as ShuttleIcon } from './icons/spaceshuttle.svg';
-import { ReactComponent as DoubleChevronIcon } from './icons/right-double-chevron.svg';
 
 // Importing Any Stylesheets (both css and sass)
 import './styles/style.css';
