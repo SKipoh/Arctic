@@ -184,7 +184,7 @@ main {
   /* We remove the logo as it takes up too much room on
         small screens */
   .logo {
-    display: nonel;
+    display: none;
   }
   /* We also change the direction of the flexbox so that it
         is treated like a row on the bottom of the screen, not a column */
@@ -224,5 +224,9 @@ main {
     -webkit-transition: opacity var(--transition-speed);
     transition: opacity var(--transition-speed);
   }
+}
+
+.linebreak {
+  white-space: pre-line;
 }
 /*# sourceMappingURL=style.css.map */

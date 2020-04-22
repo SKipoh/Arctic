@@ -176,7 +176,7 @@ main {
     /* We remove the logo as it takes up too much room on
         small screens */
     .logo {
-        display: nonel;
+        display: none;
     }
 
     /* We also change the direction of the flexbox so that it
@@ -218,4 +218,8 @@ main {
         transition: opacity var(--transition-speed);
     }
 
+}
+
+.linebreak {
+    white-space: pre-line;
 }
