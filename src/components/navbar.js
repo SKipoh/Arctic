@@ -15,33 +15,13 @@ import { ReactComponent as HomeIcon } from '../icons/houseDuo.svg';
 function Navigation() {
   return (
     <Navbar>
-        <Link to="/">
-          <Logo logo={<DoubleChevronIcon/>} text="Burne Tech"/>
-        </Link>
-
-        <Link to="/">
-          <NavItem icon={<HomeIcon/>} itemText="Home"/>
-        </Link>
-
-        <Link to="/code">
-          <NavItem icon={<CodeIcon/>} itemText={<div className="linebreak">{"Programming\nProjects"}</div>}/>
-        </Link>
-
-        <Link to="/hacking">
-          <NavItem icon={<SecretAgentIcon/>} itemText={<div className="linebreak">{"Pen Testing\n Writeups"}</div>}/>
-        </Link>
-
-        <Link to="/electronics">
-          <NavItem icon={<MicroIcon/>} itemText="Electronics"/>
-        </Link>
-
-        <Link to="/about">
-          <NavItem icon={<AboutIcon/>} itemText="About"/>
-        </Link>
-
-        <Link to="/space">
-          <NavItem icon={<ShuttleIcon/>} itemText="SPAACE"/>
-        </Link>
+        <Logo logo={<DoubleChevronIcon/>} text="Burne Tech"/>
+        <NavItem icon={<HomeIcon/>} itemText="Home" link="/"/>
+        <NavItem icon={<CodeIcon/>} itemText={<div className="linebreak">{"Programming\nProjects"}</div>} link="/code"/>
+        <NavItem icon={<SecretAgentIcon/>} itemText={<div className="linebreak">{"Pen Testing\n Writeups"}</div>} link="/hacking"/>
+        <NavItem icon={<MicroIcon/>} itemText="Electronics" link="/electronics"/>
+        <NavItem icon={<AboutIcon/>} itemText="About" link="/about"/>
+        <NavItem icon={<ShuttleIcon/>} itemText="SPAACE" link="/space"/>
       </Navbar>
   );
 }
@@ -50,8 +30,8 @@ function Navigation() {
 function Navbar(props) {
   // "navbar" is the actual coloured bar that runs down the side of the page,
   // with navbar-nav being the html list of items INSIDE "navbar".
-  // We can pass in any items we want into. The unorderedlist is the container
-  // for the flexbox
+  // We can pass in any items we want into it as a props.child. The unorderedlist
+  // is the container for the flexbox
   return (
     <nav className="navbar">
         <ul className="navbar-nav"> { props.children }</ul>
@@ -62,16 +42,18 @@ function Navbar(props) {
 
 function NavItem(props) {
   return (
-    <li className="nav-item">
-      <div class="nav-link">
-        <div>
-          { props.icon }
+    <Link className="nav-item" to={props.link}>
+      <li>
+        <div class="nav-link">
+          <div>
+            { props.icon }
+          </div>
+          <div class="link-text">
+            {props.itemText}
+          </div>
         </div>
-        <div class="link-text">
-          {props.itemText}
-        </div>
-      </div>
-    </li>
+      </li>
+    </Link>
   );
 }
 
