@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/style.css';
 
 // Importing any SVGs, Icons or other items as components for use in the
@@ -14,13 +15,33 @@ import { ReactComponent as HomeIcon } from '../icons/houseDuo.svg';
 function Navigation() {
   return (
     <Navbar>
-        <Logo logo={<DoubleChevronIcon/>} text="Burne Tech"/>
-        <NavItem icon={<HomeIcon/>} itemText="Home"/>
-        <NavItem icon={<CodeIcon/>} itemText={<div className="linebreak">{"Programming\nProjects"}</div>}/>
-        <NavItem icon={<SecretAgentIcon/>} itemText={<div className="linebreak">{"Pen Testing\n Writeups"}</div>}/>
-        <NavItem icon={<MicroIcon/>} itemText="Electronics"/>
-        <NavItem icon={<AboutIcon/>} itemText="About"/>
-        <NavItem icon={<ShuttleIcon/>} itemText="SPAACE"/>
+        <Link to="/">
+          <Logo logo={<DoubleChevronIcon/>} text="Burne Tech"/>
+        </Link>
+
+        <Link to="/">
+          <NavItem icon={<HomeIcon/>} itemText="Home"/>
+        </Link>
+
+        <Link to="/code">
+          <NavItem icon={<CodeIcon/>} itemText={<div className="linebreak">{"Programming\nProjects"}</div>}/>
+        </Link>
+
+        <Link to="/hacking">
+          <NavItem icon={<SecretAgentIcon/>} itemText={<div className="linebreak">{"Pen Testing\n Writeups"}</div>}/>
+        </Link>
+
+        <Link to="/electronics">
+          <NavItem icon={<MicroIcon/>} itemText="Electronics"/>
+        </Link>
+
+        <Link to="/about">
+          <NavItem icon={<AboutIcon/>} itemText="About"/>
+        </Link>
+
+        <Link to="/space">
+          <NavItem icon={<ShuttleIcon/>} itemText="SPAACE"/>
+        </Link>
       </Navbar>
   );
 }

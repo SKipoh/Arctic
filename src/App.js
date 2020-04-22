@@ -20,21 +20,20 @@ import './styles/style.css';
 // displayed underneath
 function App() {
   return (
-    <div>
-      <Nav />
-      <main>
-        <About />
-        <Code />
-        <Electronics />
-        <Hacking />
-        <h1>Main Page!</h1>
-        <p>grinugeranuipaegfdrniuoperhfdgsanipuohesrfainupherafgniopuaehrfdnuipaherdfnu
-          iaherdnuierghainuogrehainbuoragewbiynourgheawyibnourghaesUBYIOHGRebyuiogrHWEBYINUOG
-          RHwebyinougrHWEYIUOBNgrhwyubinogrhBYINUOHRGbynouirhGWBYOUIRWGHbuyoigrWHEUBYOIGweryboui
-          gWERBYUOIgwerbyuoiGWREBUYOIWGerbuyoiwGREBYUIOWGREIBYUOGWRebuyioGWREBYUIOWGRBY</p>
-      </main>
-      
-    </div>
+    <Router>
+      <div>
+        <Nav />
+        <main>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/code" component={Code} />
+            <Route path="/electronics" component={Electronics} />
+            <Route path="/hacking" component={Hacking} />
+          </Switch>
+        </main>
+      </div>
+    </Router>
   );
 }
 
