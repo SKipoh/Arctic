@@ -60,12 +60,14 @@ function NavItem(props) {
 
 function Logo(props) {
   return (
-    <li class="logo">
-      <div className="nav-link">
-        <div class="link-text">{ props.text }</div>
-        <div>{ props.logo }</div>
-      </div>
-    </li>
+    <Link className="logo" to="/">
+      <li>
+        <div className="nav-link">
+          <div class="link-text">{ props.text }</div>
+          <div>{ props.logo }</div>
+        </div>
+      </li>
+    </Link>
   );
 }
 

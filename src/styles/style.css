@@ -159,6 +159,7 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.3ch;
   width: 100%;
+  text-decoration: none;
 }
 
 .logo svg {
