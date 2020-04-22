@@ -1,6 +1,7 @@
 // Importing any functional/programatic bits, such as react itself,
 // the react-router, react-redux etc.
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Importing the other main pages and "complete" components for the site
 import Home from './pages/Home';
@@ -22,6 +23,10 @@ function App() {
     <div>
       <Nav />
       <main>
+        <About />
+        <Code />
+        <Electronics />
+        <Hacking />
         <h1>Main Page!</h1>
         <p>grinugeranuipaegfdrniuoperhfdgsanipuohesrfainupherafgniopuaehrfdnuipaherdfnu
           iaherdnuierghainuogrehainbuoragewbiynourgheawyibnourghaesUBYIOHGRebyuiogrHWEBYINUOG
