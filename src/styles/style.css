@@ -20,7 +20,7 @@ body {
 /* Changing how the Scroll Bar looks */
 /* ################################# */
 body::-webkit-scrollbar {
-  width: 0.25rem;
+  width: 1rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -36,6 +36,8 @@ body::-webkit-scrollbar-thumb {
 main {
   margin-left: 5rem;
   padding: 1rem;
+  background-color: var(--bg-secondary);
+  height: 100vh;
 }
 
 /* Styling for the navigation bar that sits over the whole site.
@@ -131,12 +133,12 @@ main {
 /* ################################# */
 .fa-primary {
   /*color: #ff7eee;*/
-  color: #1b8f25;
+  color: #128f1d;
 }
 
 .fa-secondary {
   /*color: #df49a6;*/
-  color: #30df47cc;
+  color: #3bdf51;
 }
 
 .nav-link:hover {
