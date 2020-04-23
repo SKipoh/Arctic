@@ -179,6 +179,36 @@ main {
 }
 
 /* Home Page Styling */
+.base, .homeText {
+  color: var(--text-primary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3ch;
+  margin-top: 15vh;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.homeLogo svg {
+  min-width: 10rem;
+  margin: 0 1.25rem;
+  -webkit-filter: grayscale(75%) opacity(0.7);
+          filter: grayscale(75%) opacity(0.7);
+}
+
+.homeText {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
 /* Small Screen Media Query (Intended for phone Portrait) */
 @media only screen and (max-width: 600px) {
   /* Here we move the navbar to be along the bottom

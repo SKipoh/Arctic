@@ -172,7 +172,31 @@ main {
 
 
 /* Home Page Styling */
+.base {
+    color: var(--text-primary);
+    display: flex;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3ch;
+    margin-top: 15vh;
+    align-content: center;
+    justify-content: center;
+}
 
+.homeLogo svg {
+    min-width: 10rem;
+    margin: 0 1.25rem;
+    filter: grayscale(75%) opacity(0.7);
+}
+
+.homeText {
+    @extend .base;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: bold;
+    font-size: 4rem;
+
+}
 
 
 
