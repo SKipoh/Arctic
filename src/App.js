@@ -11,6 +11,9 @@ import Electronics from './pages/electronics';
 import Hacking from './pages/hacking';
 
 import Nav from './components/navbar';
+import Tile from './components/tile';
+
+import { ReactComponent as MicroIcon } from './icons/microchipDuo.svg';
 
 
 // Importing Any Stylesheets (both css and sass)
@@ -31,6 +34,7 @@ function App() {
             <Route path="/electronics" component={Electronics} />
             <Route path="/hacking" component={Hacking} />
           </Switch>
+
         </main>
       </div>
     </Router>
