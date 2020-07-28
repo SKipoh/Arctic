@@ -1,4 +1,4 @@
-/* Styles for use thorughout the Website */
+/* Styles for use throughout the Website */
 :root {
   font-size: 16px;
   font-family: 'Open Sans';
@@ -9,7 +9,7 @@
   --nav-size: 60px;
   --transition-speed: 400ms;
 }
-  
+
 body {
   color: black;
   background-color: white;
@@ -30,7 +30,7 @@ body::-webkit-scrollbar-track {
 }
   
 body::-webkit-scrollbar-thumb {
-  background: #6649b8;
+  background: #128f1d;
 }
 /* ################################# */
 
@@ -197,6 +197,34 @@ main {
     font-size: 4rem;
 
 }
+
+
+
+/* Tile Component Styling */
+.tileBase {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin: 5vh;
+    font-size: 2rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.tileBase svg {
+    color: var(--text-secondary);
+    min-width: 2rem;
+    max-height: 20rem;
+    margin: 0 1.5rem;
+}
+
+.tileTitle {
+    @extend .tileBase;
+    margin: 1vh;
+    
+}
+
 
 
 
