@@ -2,10 +2,10 @@
 :root {
   font-size: 16px;
   font-family: 'Open Sans';
-  --text-primary: #b6b6b6b6;
+  --text-primary: #b5b5b5b6;
   --text-secondary: #ececec;
-  --bg-primary: #23232e;
-  --bg-secondary: #141418;
+  --bg-primary: #282c34;
+  --bg-secondary: #21252b;
   --nav-size: 60px;
   --transition-speed: 400ms;
 }
@@ -149,6 +149,7 @@ main {
 }
 
 /* ################################# */
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
 /* Styling for the Nav bar's logo and text */
 .logo {
   font-weight: bold;
@@ -178,8 +179,9 @@ main {
           transform: rotate(-180deg);
 }
 
-/* Home Page Styling */
-.base, .homeText {
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* Base Home Page Styling */
+.base, .homeText, .pageHeader {
   color: var(--text-primary);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -195,6 +197,7 @@ main {
           justify-content: center;
 }
 
+/* Death Star Icon Styling */
 .homeLogo svg {
   min-width: 10rem;
   margin: 0 1.25rem;
@@ -202,15 +205,26 @@ main {
           filter: grayscale(75%) opacity(0.7);
 }
 
-.homeText {
+/* "Burne Tech" text next to the deathstar logo */
+.homeText, .pageHeader {
   margin-top: auto;
   margin-bottom: auto;
   font-weight: bold;
   font-size: 4rem;
 }
 
+/* ABOUT PAGE STYLING */
+#aboutHeader {
+  margin-top: 4vh;
+}
+
+.pageHeader {
+  margin-top: 1vh;
+  font-size: 3rem;
+}
+
 /* Tile Component Styling */
-.tileBase, .tileTitle {
+.tileBase {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,19 +239,50 @@ main {
           justify-content: center;
   margin: 5vh;
   font-size: 2rem;
-  color: var(--text-secondary);
   text-align: center;
+  max-width: 30vw;
+  background-color: var(--bg-primary);
+  border-radius: 10px;
+  -webkit-filter: opacity(0.7);
+          filter: opacity(0.7);
+  -webkit-transition: var(--transition-speed);
+  transition: var(--transition-speed);
 }
 
-.tileBase svg, .tileTitle svg {
+.tileBase svg {
   color: var(--text-secondary);
-  min-width: 2rem;
-  max-height: 20rem;
+  min-width: 2vw;
+  max-height: 10vh;
   margin: 0 1.5rem;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
-.tileTitle {
+/* .tileBase svg {
+    color: var(--text-secondary);
+    min-width: 2vw;
+    max-height: 10vh;
+    margin: 0 1.5rem;
+} */
+.tileBase p {
+  font-size: 1.1rem;
+  letter-spacing: normal;
+  font-weight: normal;
+}
+
+#title {
   margin: 1vh;
+}
+
+.tileBase:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  color: var(--text-secondary);
+}
+
+.tileBase:hover svg {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
 }
 
 /* Small Screen Media Query (Intended for phone Portrait) */
