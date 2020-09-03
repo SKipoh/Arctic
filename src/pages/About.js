@@ -4,7 +4,12 @@ import '../styles/style.css';
 function About() {
   return (
     <div>
-        <h1>About Page</h1>
+      <div id="aboutHeader" className="base">
+        <div className="pageHeader">About Me</div>
+      </div>
+      <div>
+        
+      </div>
     </div>
   );
 }

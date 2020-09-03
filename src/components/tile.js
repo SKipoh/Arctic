@@ -6,10 +6,12 @@ import '../styles/style.css';
 function tile(props) {
   return (
       <div className="tileBase">
-        <div className="tileTitle">
+        <div id="title">
           { props.title }
         </div>
+        <div id="tileIco">
           { props.icon }
+        </div>
           <p>
             { props.desc }
           </p>
