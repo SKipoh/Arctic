@@ -178,7 +178,7 @@ main {
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 0.3ch;
-    margin-top: 15vh;
+    margin-top: 10vh;
     align-content: center;
     justify-content: center;
 }
@@ -197,6 +197,12 @@ main {
     margin-bottom: auto;
     font-weight: bold;
     font-size: 4rem;
+    flex-wrap: wrap;
+}
+
+#tile {
+    flex-basis: 25%;
+    font-size: 2vw;
 }
 
 
@@ -219,10 +225,10 @@ main {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    margin: 5vh;
+    margin: 3vh;
     font-size: 2rem;
     text-align: center;
-    max-width: 30vw;
+    width: 20vw;
     background-color: var(--bg-primary);
     border-radius: 10px;
     svg {
@@ -236,15 +242,9 @@ main {
     transition: var(--transition-speed);
 }
 
-/* .tileBase svg {
-    color: var(--text-secondary);
-    min-width: 2vw;
-    max-height: 10vh;
-    margin: 0 1.5rem;
-} */
-
 .tileBase p {
     font-size: 1.1rem;
+    margin: 2vw;
     letter-spacing: normal;
     font-weight: normal;
 }
