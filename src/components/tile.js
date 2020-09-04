@@ -5,7 +5,7 @@ import '../styles/style.css';
 
 function tile(props) {
   return (
-      <div className="tileBase">
+      <Link className="tileBase" to={props.link} style={{textDecoration: 'none'}}>
         <div id="title">
           { props.title }
         </div>
@@ -15,7 +15,7 @@ function tile(props) {
           <p>
             { props.desc }
           </p>
-      </div>
+      </Link>
   );
 }
 

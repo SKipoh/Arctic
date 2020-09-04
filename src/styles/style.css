@@ -180,7 +180,7 @@ main {
 }
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
-/* Base Home Page Styling */
+/* ##### Base Home Page Styling ##### */
 .base, .homeText, .pageHeader {
   color: var(--text-primary);
   display: -webkit-box;
@@ -205,7 +205,7 @@ main {
           filter: grayscale(75%) opacity(0.7);
 }
 
-/* "Burne Tech" text next to the deathstar logo */
+/* ##### "Burne Tech" text next to the deathstar logo ##### */
 .homeText, .pageHeader {
   margin-top: auto;
   margin-bottom: auto;
@@ -221,7 +221,7 @@ main {
   font-size: 2vw;
 }
 
-/* ABOUT PAGE STYLING */
+/* ##### ABOUT PAGE STYLING ##### */
 #aboutHeader {
   margin-top: 4vh;
 }
@@ -231,8 +231,9 @@ main {
   font-size: 3rem;
 }
 
-/* Tile Component Styling */
+/* ##### Tile Component Styling ##### */
 .tileBase {
+  color: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -288,7 +289,7 @@ main {
           filter: grayscale(0%);
 }
 
-/* Small Screen Media Query (Intended for phone Portrait) */
+/* ##### Small Screen Media Query (Intended for phone Portrait) ##### */
 @media only screen and (max-width: 600px) {
   /* Here we move the navbar to be along the bottom
         of the user's screen */
@@ -323,7 +324,7 @@ main {
   }
 }
 
-/* Large Screen Media Query */
+/* ##### Large Screen Media Query ##### */
 @media only screen and (min-width: 600px) {
   /* The styling here will only be applied to screens
         with a width of greater than 600 pixels (i.e. laptops/pc's)
