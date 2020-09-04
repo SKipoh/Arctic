@@ -5,7 +5,7 @@
   --text-primary: #b5b5b5b6;
   --text-secondary: #ececec;
   --bg-primary: #282c34;
-  --bg-secondary: #21252b;
+  --bg-secondary: #12181b;
   --nav-size: 60px;
   --transition-speed: 400ms;
 }
@@ -49,6 +49,7 @@ main {
 /* ################################# */
 .navbar {
   position: fixed;
+  z-index: 999;
   background-color: var(--bg-primary);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,6 +143,7 @@ main {
 }
 
 .nav-link:hover {
+  z-index: 999;
   -webkit-filter: grayscale(0%) opacity(1);
           filter: grayscale(0%) opacity(1);
   background: var(--bg-secondary);
@@ -216,6 +218,7 @@ main {
 }
 
 #tile {
+  z-index: 10;
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
   font-size: 2vw;
