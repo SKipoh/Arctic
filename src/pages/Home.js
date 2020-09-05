@@ -1,16 +1,16 @@
 import React from 'react';
-import { ReactComponent as LogoIcon } from '../icons/deathstarDuo.svg';
 import '../styles/style.css';
 
 // Importing the Tile Component
 import Tile from '../components/tile';
 
 // Importing Icons
+import { ReactComponent as LogoIcon } from '../icons/deathstarDuo.svg';
 import { ReactComponent as CodeIcon } from '../icons/CodeDuo.svg';
 import { ReactComponent as MicroIcon } from '../icons/microchipDuo.svg';
 import { ReactComponent as SecretAgentIcon } from '../icons/secretAgentDuo.svg';
 import { ReactComponent as AboutIcon } from '../icons/address-cardDuo.svg';
-import { ReactComponent as LoginIcon } from '../icons/login-Duo.svg';
+
 
 function Home() {
   return (
