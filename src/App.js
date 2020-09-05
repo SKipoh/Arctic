@@ -34,7 +34,6 @@ function App() {
             <Route path="/electronics" component={Electronics} />
             <Route path="/hacking" component={Hacking} />
           </Switch>
-
         </main>
       </div>
     </Router>
