@@ -12,7 +12,7 @@
 
 body {
   color: black;
-  background-color: white;
+  background-color: var(--bg-secondary);
   margin: 0;
   padding: 0;
 }
@@ -41,6 +41,7 @@ main {
   margin-left: 5rem;
   padding: 1rem;
   background-color: var(--bg-secondary);
+  background-size: 100%;
   height: 100vh;
 }
 
@@ -61,7 +62,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: top;
-
   transition: width 200ms ease;
 }
 
@@ -99,6 +99,11 @@ main {
 
     filter: grayscale(100%) opacity(0.7);
     transition: var(--transition-speed);
+
+    svg {
+        min-width: 2rem;
+        margin: 0 1.5rem;
+    }
 }
 
 .link-text {
@@ -106,15 +111,6 @@ main {
     margin-left: 1rem;
 }
 /* ################################# */
-
-
-
-/* Setting a minimum size for the SVG's so they stay
-    visible */
-.nav-link svg {
-    min-width: 2rem;
-    margin: 0 1.5rem;
-}
 
 
 
@@ -160,11 +156,10 @@ main {
     letter-spacing: 0.3ch;
     width: 100%;
     text-decoration: none;
-}
-
-.logo svg {
-    transform: rotate(0deg);
-    transition: transform var(--transition-speed);
+    svg {
+        transform: rotate(0deg);
+        transition: transform var(--transition-speed);
+    }
 }
 
 .navbar:hover .logo svg {
@@ -177,6 +172,7 @@ main {
 .base {
     color: var(--text-primary);
     display: flex;
+    flex-direction: row;
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 0.3ch;
@@ -244,17 +240,17 @@ main {
     }
     filter: opacity(0.7);
     transition: var(--transition-speed);
-}
-
-.tileBase p {
-    font-size: 1.1rem;
-    margin: 2vw;
-    letter-spacing: normal;
-    font-weight: normal;
+    p {
+        font-size: 1vw;
+        margin: 2vw;
+        letter-spacing: normal;
+        font-weight: normal;
+    }
 }
 
 #title {
     margin: 1vh;
+    font-size: 1.5vw;
 }
 
 .tileBase:hover {
@@ -269,7 +265,7 @@ main {
 
 
 /* ##### Small Screen Media Query (Intended for phone Portrait) ##### */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
     /* Here we move the navbar to be along the bottom
         of the user's screen */
     .navbar {
@@ -299,7 +295,59 @@ main {
     /* Also, we remove the gap in the main element and the bar */
     main {
         margin: 0;
+        margin-bottom: 10vh;
+        height: 100%;
     }
+
+    
+    /* ##### Home Page Tiles ##### */
+    .base {
+        color: var(--text-primary);
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3ch;
+        margin-top: 0.5vh;
+    }
+
+    .homeText {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    #title {
+        margin: 1.75vh;
+        font-size: 7vw;
+    }
+
+    /* Death Star Icon Styling */
+    .homeLogo svg {
+        min-width: 6.5rem;
+        margin: 5vh;
+        align-content: center;
+        justify-content: center;;
+        filter: grayscale(75%) opacity(0.7);
+    }
+    /* ##### ^^^^^ ##### */
+
+    /* ##### Tile Styling ##### */
+    .tileBase {
+        width: 80vw;
+        svg {
+            color: var(--text-secondary);
+            min-width: 2vw;
+            max-height: 10vh;
+            margin: 0 1.5rem;
+        }
+        p {
+            font-size: 5vw;
+        }
+    }
+    
+    /* ##### ^^^^^ ##### */
 
 }
 
