@@ -21,7 +21,7 @@ function Navigation() {
         <NavItem icon={<SecretAgentIcon/>} itemText={<div className="linebreak">{"Pen Testing\n Writeups"}</div>} link="/hacking"/>
         <NavItem icon={<MicroIcon/>} itemText="Electronics" link="/electronics"/>
         <NavItem icon={<AboutIcon/>} itemText="About" link="/about"/>
-        <NavItem icon={<ShuttleIcon/>} itemText="SPAACE" link="/space"/>
+        <NavItem icon={<ShuttleIcon/>} itemText="SPAACE" link="/login"/>
       </Navbar>
   );
 }
