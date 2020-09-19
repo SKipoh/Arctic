@@ -3,6 +3,7 @@ import '../styles/style.css';
 
 // Importing the Tile Component
 import Tile from '../components/tile';
+import Logo from '../components/Logo';
 
 // Importing Icons
 import { ReactComponent as LogoIcon } from '../icons/deathstarDuo.svg';
@@ -53,14 +54,6 @@ function Home() {
       </div>
     </div>
   );
-}
-
-function Logo(props) {
-  return (
-    <div className="homeLogo">
-      <div>{ props.logo }</div>
-    </div>
-  )
 }
 
 export default Home;
