@@ -216,6 +216,62 @@ main {
     font-size: 3rem;
 }
 
+.SearchBar {
+    @extend .base;
+    flex-direction: column;
+    position: relative;
+    border-bottom: 2px dashed var(--text-primary);
+    width: 50vw;
+    margin: 3vh auto 3vh;
+    .input {
+        border: none;
+        outline: none;
+        overflow: hidden;
+        justify-content: center;
+        align-content: center;
+        padding: 1rem;
+        background: none;
+        color: var(--text-primary);
+        letter-spacing: normal;
+        text-transform: none;
+        font-size: 2rem;
+        font-weight: bold;
+        z-index: 2;
+    }
+    .label {
+        color: var(--text-primary);
+        z-index: 1;
+        position: absolute;
+        
+        transform-origin: 0%;
+        transition: transform 400ms;
+    }
+}
+
+.SearchBar::after {
+    content: "";
+    position: relative;
+    display: block;
+    height: 4px;
+    width: 50vw;
+    background: #1625ff;
+    transform: scaleX(0);
+    transform-origin: 0%;
+    transition: transform 500ms ease;
+    top: 2px;
+}
+
+.SearchBar:focus-within {
+    border-color: transparent;
+    .label {
+        transform: scale(0.8) translateY(-4rem);
+    }
+}
+
+.SearchBar:focus-within::after {
+    transform: scaleX(1);
+}
+
 
 
 /* ##### Tile Component Styling ##### */
@@ -261,6 +317,18 @@ main {
     }
 }
 
+#Code {
+    .homeLogo {
+        margin-top: auto;
+        margin-bottom: auto;
+        svg {
+            filter: grayscale(0%) opacity(1);
+        }
+    }
+    .homeText {
+        flex-direction: column;
+    }
+}
 
 
 
@@ -346,9 +414,17 @@ main {
             font-size: 5vw;
         }
     }
-    
     /* ##### ^^^^^ ##### */
 
+    #Code {
+        .homeText {
+            flex-direction: column;
+            font-size: 1.6rem;
+        }
+        svg {
+            min-width: 20vw;
+        }
+    }
 }
 
 
@@ -375,4 +451,8 @@ main {
 
 .linebreak {
     white-space: pre-line;
+}
+
+@media only screen and (min-width: 1000px) {
+    
 }

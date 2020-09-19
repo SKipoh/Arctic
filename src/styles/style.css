@@ -182,7 +182,7 @@ main {
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 /* ##### Base Home Page Styling ##### */
-.base, .homeText, .pageHeader {
+.base, .homeText, .pageHeader, .SearchBar {
   color: var(--text-primary);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -235,6 +235,80 @@ main {
 .pageHeader {
   margin-top: 1vh;
   font-size: 3rem;
+}
+
+.SearchBar {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  border-bottom: 2px dashed var(--text-primary);
+  width: 50vw;
+  margin: 3vh auto 3vh;
+}
+
+.SearchBar .input {
+  border: none;
+  outline: none;
+  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 1rem;
+  background: none;
+  color: var(--text-primary);
+  letter-spacing: normal;
+  text-transform: none;
+  font-size: 2rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.SearchBar .label {
+  color: var(--text-primary);
+  z-index: 1;
+  position: absolute;
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+}
+
+.SearchBar::after {
+  content: "";
+  position: relative;
+  display: block;
+  height: 4px;
+  width: 50vw;
+  background: #1625ff;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+  top: 2px;
+}
+
+.SearchBar:focus-within {
+  border-color: transparent;
+}
+
+.SearchBar:focus-within .label {
+  -webkit-transform: scale(0.8) translateY(-4rem);
+          transform: scale(0.8) translateY(-4rem);
+}
+
+.SearchBar:focus-within::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 /* ##### Tile Component Styling ##### */
@@ -296,6 +370,23 @@ main {
           filter: grayscale(0%);
 }
 
+#Code .homeLogo {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#Code .homeLogo svg {
+  -webkit-filter: grayscale(0%) opacity(1);
+          filter: grayscale(0%) opacity(1);
+}
+
+#Code .homeText, #Code .pageHeader {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 /* ##### Small Screen Media Query (Intended for phone Portrait) ##### */
 @media only screen and (max-width: 650px) {
   /* Here we move the navbar to be along the bottom
@@ -332,7 +423,7 @@ main {
     height: 100%;
   }
   /* ##### Home Page Tiles ##### */
-  .base, .homeText, .pageHeader {
+  .base, .homeText, .pageHeader, .SearchBar {
     color: var(--text-primary);
     display: -webkit-box;
     display: -ms-flexbox;
@@ -389,6 +480,16 @@ main {
     font-size: 5vw;
   }
   /* ##### ^^^^^ ##### */
+  #Code .homeText, #Code .pageHeader {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 1.6rem;
+  }
+  #Code svg {
+    min-width: 20vw;
+  }
 }
 
 /* ##### Large Screen Media Query ##### */
