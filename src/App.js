@@ -11,9 +11,9 @@ import Electronics from './pages/electronics';
 import Hacking from './pages/hacking';
 
 import Nav from './components/navbar';
-import Tile from './components/tile';
+/* import Tile from './components/tile'; */
 
-import { ReactComponent as MicroIcon } from './icons/microchipDuo.svg';
+/* import { ReactComponent as MicroIcon } from './icons/microchipDuo.svg'; */
 
 
 // Importing Any Stylesheets (both css and sass)
