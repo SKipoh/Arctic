@@ -3,9 +3,9 @@ import '../styles/style.css';
 
 function searchBar() {
     return (
-        <div className="SearchBar">
-            <input name="Search" type="text" className="input" placeholder=""/>
-            <label for="Search" className="label">Search...</label>
+        <div class="SearchBar">
+            <input type="text" name="Search" className="input" placeholder=" " onChange={handleChanger}/>
+            <label className="label" for="Search">Search...</label>
       </div>
     )
 }

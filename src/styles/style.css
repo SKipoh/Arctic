@@ -237,6 +237,7 @@ main {
   font-size: 3rem;
 }
 
+/* ##### Search Bar Animation CSS ##### */
 .SearchBar {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -265,6 +266,7 @@ main {
   font-size: 2rem;
   font-weight: bold;
   z-index: 2;
+  width: 75vw;
 }
 
 .SearchBar .label {
@@ -301,16 +303,18 @@ main {
   border-color: transparent;
 }
 
-.SearchBar:focus-within .label {
-  -webkit-transform: scale(0.8) translateY(-4rem);
-          transform: scale(0.8) translateY(-4rem);
-}
-
 .SearchBar:focus-within::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
 
+.SearchBar:focus-within .label,
+.input:not(:placeholder-shown) + .label {
+  -webkit-transform: scale(0.8) translateY(-5rem);
+          transform: scale(0.8) translateY(-5rem);
+}
+
+/* ##### ^^^^^^^^^^^^^^^^^^^^^^^^ ##### */
 /* ##### Tile Component Styling ##### */
 .tileBase {
   color: inherit;
@@ -489,6 +493,30 @@ main {
   }
   #Code svg {
     min-width: 20vw;
+  }
+  .SearchBar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80vw;
+    font-size: 5vh;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 3vh;
+    font-size: 1.5rem;
+  }
+  .SearchBar .input {
+    padding: none;
+    width: 80vw;
+  }
+  .SearchBar::after {
+    width: 80vw;
+  }
+  .SearchBar:focus-within .label {
+    -webkit-transform: scale(0.8) translateY(-20rem);
+            transform: scale(0.8) translateY(-20rem);
   }
 }
 

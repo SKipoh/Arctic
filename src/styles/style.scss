@@ -216,6 +216,8 @@ main {
     font-size: 3rem;
 }
 
+
+/* ##### Search Bar Animation CSS ##### */
 .SearchBar {
     @extend .base;
     flex-direction: column;
@@ -237,15 +239,16 @@ main {
         font-size: 2rem;
         font-weight: bold;
         z-index: 2;
+        width: 75vw;
     }
     .label {
         color: var(--text-primary);
         z-index: 1;
         position: absolute;
-        
         transform-origin: 0%;
         transition: transform 400ms;
     }
+    
 }
 
 .SearchBar::after {
@@ -262,15 +265,18 @@ main {
 }
 
 .SearchBar:focus-within {
-    border-color: transparent;
-    .label {
-        transform: scale(0.8) translateY(-4rem);
-    }
+    border-color: transparent;    
 }
 
 .SearchBar:focus-within::after {
     transform: scaleX(1);
 }
+
+.SearchBar:focus-within .label,
+.input:not(:placeholder-shown) + .label {
+    transform: scale(0.8) translateY(-5rem);
+}
+/* ##### ^^^^^^^^^^^^^^^^^^^^^^^^ ##### */
 
 
 
@@ -425,6 +431,32 @@ main {
             min-width: 20vw;
         }
     }
+
+    .SearchBar {
+        flex-direction: column;
+        width: 80vw;
+        font-size: 5vh;
+        justify-content: flex-start;
+        margin-top: 3vh;
+        font-size: 1.5rem;
+        .input {
+            padding: none;
+            width: 80vw;
+        }
+        .label {
+            
+        }
+    }
+
+    .SearchBar::after {
+        width: 80vw;
+    }
+
+    .SearchBar:focus-within {
+        .label {
+            transform: scale(0.8) translateY(-20rem);
+        }
+    }
 }
 
 
@@ -454,5 +486,5 @@ main {
 }
 
 @media only screen and (min-width: 1000px) {
-    
+
 }
